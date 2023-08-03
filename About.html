@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sarah A. Loterte</title>
+
+<link rel = "icon" img src="logo.png" class="logo" type = "image/x-icon" href="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+</head> 
+<style>
+body {
+        background: rgb(234, 174, 9);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: grid;
+        width: 90%;
+        margin: 40px auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+
+    }
+
+    .front img {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .container1 {
+        position: relative;
+    }
+
+    .front h2 {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+    }
+
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(11, 2, 58);
+        color: white;
+        padding: 15px;
+        transform: perspective(600px) rotateY(180deg);
+        transition: transform .5s linear 0s;
+        backface-visibility: hidden;
+        border-radius: 10px
+    }
+
+    .front {
+        color: white;
+        transform: perspective(600px) rotateY(0deg);
+        transition: transform .5s linear 0s;
+
+
+    }
+
+    .container1:hover>.front {
+        transform: perspective(600px) rotateY(-180deg);
+        cursor: pointer;
+    }
+
+    .container1:hover>.back {
+        transform: perspective(600px) rotateY(0deg);
+        cursor: pointer;
+
+
+    }
+
+    @media(max-width: 800px) {
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
+    @media(max-width: 500px) {
+        .container {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+    }
+  
+  .bg-img {
+    /* The image used */
+    width: 100%;
+    height: 770px;
+    background-color: rgb(2, 2, 43);
+    border: 1px solid rgb(5, 1, 42);
+    background-image: url('sarah_logo.png');
+
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    /* Needed to position the navbar */
+    position: relative;
+  }
+  
+  
+  /* Position the navbar container inside the image */
+  .containers {
+    position: right;
+    margin: 20px;
+    width: auto;
+  }
+  
+  /* The navbar */
+  .topnav {
+    overflow: hidden;
+  }
+  
+  /* Navbar links */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #dddddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #f4c908;
+    color: rgb(14, 12, 124);
+  }
+  
+  .topnav-right {
+    float: right;
+  }
+  
+  
+  
+  </style>
+<body >
+  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  
+  </a>
+
+  <section>
+    <div class="bg-img">
+      <div class="containers">
+        <div class="topnav">
+          <div class="topnav-right">
+            <a class="active" href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="project.html">Project</a>
+            <a href="experience.html">Experience</a>
+            <a href="skills.html">Skills</a>
+             <a href="https://www.credly.com/users/sarah-loterte/badges">Certificates</a>
+          </div>
+      </div>
+    </div>
+    
+
+  	
+<div class="hero-body">
+  <div class="containers has-text-centered">
+       
+    </div>
+</div> 
+</div>
+
+<div class="hero-foot  ">
+<nav class="tabs is-boxed is-fullwidth is-large ">
+        <div class="containers ">
+          <ul>
+            <li class="tab is-active" onclick="openTab(event,'Java')"><a >Java</a></li>
+            <li class="tab " onclick="openTab(event,'PHP') "><a >PHP</a></li>
+            <li class="tab" onclick="openTab(event,'Python')"><a >Python</a></li>
+            <li class="tab" onclick="openTab(event,'Wap')"><a >Window Form Application</a></li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+</section>
+
+<div >
+    <div id="Java" class="content-tab has-text-white " >
+      <div class="content is-large"><h1>My Project</h1></div>
+
+      <div class="container">
+        <div class="container1">
+            <div class="front">
+                <img src="10.png">
+            </div>
+            <div class="back">
+                <h2>Mordor Corp</h2>
+                <p>Created using Java Spring Boot, this application facilitates basic information management. Users can add, edit, delete, and search for data.</p>
+            </div>
+        </div>
+  
+  
+        <div class="container1">
+            <div class="front">
+                <img src="15.png">
+            </div>
+            <div class="back">
+                <h2>Pila Technology and Consultancy</h2>
+                <p>Created using Java Spring Boot, this application facilitates basic information management. Users can add, edit, delete, and search for data.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+      
+    <div id="PHP" class="content-tab has-text-white" style="display:none">
+
+    	<div class="content is-large"><h1>My Project</h1></div>
+      <div class="container">
+        <div class="container1">
+            <div class="front">
+                <img src="19.png">
+            </div>
+            <div class="back">
+                <h2>Office of the Agriculturist in Quezon Province</h2>
+                <p>This PHP-based system is designed for office staff and farmers of Agriculture Quezon Province. It monitors membership in RSBSA and tracks interventions and commodities received. Additionally, it provides financial information, such as subsidies and active membership status..</p>
+                <p><a href="https://applife.com.ph/agriculture/agriculture/index.php">Show Project</a></p>
+              </div>
+        </div>
+      
+
+    
+        <div class="container1">
+            <div class="front">
+                <img src="20.png">
+            </div>
+            <div class="back">
+                <h2>Sps fash lending Corporation</h2>
+                <p>A PHP system catering to loan applicants, featuring an application process and notification for completed requirements. It helps users stay updated about due dates and other loan-related information.</p>
+            </div>
+        </div>
+    
+        <div class="container1">
+            <div class="front">
+                <img src="21.png">
+            </div>
+            <div class="back">
+                <h2>Simple Government Forms</h2>
+                <p>A simple PHP-based government form system, implementing CRUD operations for various government agencies such as GSIS, PhilHealth, DTI, Passport, and SSS. The system tests the accuracy of data entry into the database, enabling easy creation, reading, editing, and deletion of records.</p>
+            </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div id="Python" class="content-tab has-text-white" style="display:none">
+      <div class="content is-large"><h1>My Project</h1></div>
+
+      <div class="container">
+        <div class="container1">
+            <div class="front">
+                <img src="12.png">
+            </div>
+            <div class="back">
+                <h2>Simple Basteakoy Ordering System</h2>
+                <p>This project utilizes Python Flask to create an integrated online ordering platform. Users can place orders, add more items, and check out. Once an order is placed, the system automatically adds it to the queue and sends notifications about the delivery status. The system exclusively supports cash-on-delivery (COD) payment method.</p>
+            </div>
+        </div>
+     
+
+        <div class="container1">
+            <div class="front">
+                <img src="14.png">
+            </div>
+            <div class="back">
+                <h2>Corn Analysis</h2>
+                <p>Built with Python Flask and utilizing a dataset and CNN (Convolutional Neural Network) through TensorFlow, this system aids in diagnosing plant health issues related to pests and nutrient deficiencies. Users can upload pictures, select the day of examination, and choose from available options. The system then provides possible treatments to prevent and address potential issues. It also includes voice recognition for elderly users with visual impairments.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div id="Wap" class="content-tab has-text-white" style="display:none">
+    <div class="content is-large"><h1>My Project</h1></div>
+      <div class="container">
+        <div class="container1">
+            <div class="front">
+                <img src="2.png">
+            </div>
+            <div class="back">
+                <h2>ApPrice</h2>
+                <p>This project is a Window Form Application with bread functionality, allowing users to browse through products, read, edit, add, and delete items. Upon completion, it displays all the added values and automatically computes the total price. Additionally, it features a simple inventory system to track product availability.</p>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="front">
+                <img src="4.png">
+            </div>
+            <div class="back">
+                <h2>Calculator</h2>
+                <p>Developed as a Window Form Application, this accurate and efficient scientific calculator supports addition, division, subtraction, multiplication, and percentage calculations. It offers four options for comparison solving, nested loops, and power operations.</p>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="front">
+                <img src="5.png">
+            </div>
+            <div class="back">
+              <h2>Calculator</h2>
+              <p>Developed as a Window Form Application, this accurate and efficient scientific calculator supports addition, division, subtraction, multiplication, and percentage calculations. It offers four options for comparison solving, nested loops, and power operations.</p>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="front">
+                <img src="6.png">
+            </div>
+            <div class="back">
+              <h2>Catching Fruit</h2>
+              <p> child-friendly Window Form Application game where players catch fruits to increase their score. The objective is to avoid catching non-fruits, as doing so ends the game.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="container1">
+          <div class="front">
+              <img src="7.png">
+          </div>
+          <div class="back">
+              <h2>Pop the Fruit</h2>
+              <p>A children's game in the form of a Window Application where players tap on fruits while ensuring no fruits pass by. They must also avoid tapping on bombs. The game ends when three fruits are missed or a bomb is tapped.</p>
+          </div>
+      </div>
+      <div class="container1">
+          <div class="front">
+              <img src="8.png">
+          </div>
+          <div class="back">
+            <h2>4ever Motoshop</h2>
+            <p>Designed as a Window Form Application, this project allows users to browse motor products, make purchases, and efficiently manage inventory. Motorshops can easily track stock availability, monitor parts' whereabouts, and perform read, edit, add, and delete operations. After each transaction, the system displays the added values and automatically calculates the total price.</p>
+          </div>
+      </div>
+      <div class="container1">
+          <div class="front">
+              <img src="9.png">
+          </div>
+          <div class="back">
+              <h2>Simplee Flappy Bird</h2>
+              <p>This child-oriented Window Form Application game involves tapping to make a bird jump and avoiding collisions with tubes. The game has an infinite loop and aims to help children improve their focus, alertness, and achieve higher scores.</p>
+          </div>
+      </div>
+      <div class="container1">
+          <div class="front">
+              <img src="17.png">
+          </div>
+          <div class="back">
+              <h2>Science App</h2>
+              <p>An interactive Window Form Application for kids, covering various topics such as the human body, 5 senses, animals, weather, fruits, vegetables, and hygiene. Each topic includes video learning, quizzes, and games to facilitate fun and engaging learning experiences.</p>
+          </div>
+      </div>
+  </div>
+
+
+</div></div>
+
+
+
+
+
+
+  
+
+      
+
+  
+
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    $el.classList.add('is-active');
+  }
+
+  function closeModal($el) {
+    $el.classList.remove('is-active');
+  }
+
+  function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
+
+  // Add a click event on buttons to open a specific modal
+  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+
+    $trigger.addEventListener('click', () => {
+      openModal($target);
+    });
+  });
+
+  // Add a click event on various child elements to close the parent modal
+  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
+
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
+
+  // Add a keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    const e = event || window.event;
+
+    if (e.keyCode === 27) { // Escape key
+      closeAllModals();
+    }
+  });
+});
+
+
+
+
+ function openTab(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("content-tab");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " is-active";
+}
+</script>
+
+</body>
+</html>
+  
+
+
